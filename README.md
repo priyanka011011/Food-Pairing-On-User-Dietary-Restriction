@@ -46,12 +46,16 @@
   ![image](https://github.com/priyanka011011/Food-Pairing-On-User-Dietary-Restriction/assets/83969599/54f6e4a3-13a2-4bde-aae9-753daf78c816)
   ![image](https://github.com/priyanka011011/Food-Pairing-On-User-Dietary-Restriction/assets/83969599/22b9f45a-ff6e-48b0-81f0-143a5a7a208c)
   ![image](https://github.com/priyanka011011/Food-Pairing-On-User-Dietary-Restriction/assets/83969599/6fb6ac8e-f096-4f65-9a0f-4ae763c1b68d)
+  ![image](https://github.com/priyanka011011/Food-Pairing-On-User-Dietary-Restriction/assets/83969599/511b32af-a26f-4d93-8be5-e565102def03)
+
 
 
   
  ![image](https://github.com/priyanka011011/Food-Pairing-On-User-Dietary-Restriction/assets/83969599/0249f5d0-d7f0-4ba0-8e55-f1d3798e92eb)
  ![image](https://github.com/priyanka011011/Food-Pairing-On-User-Dietary-Restriction/assets/83969599/b3ce2b27-2e32-4f8f-8185-cf75e41c1826)
  ![image](https://github.com/priyanka011011/Food-Pairing-On-User-Dietary-Restriction/assets/83969599/965d5940-e470-4d53-a4e8-c750440ad15c)
+ ![image](https://github.com/priyanka011011/Food-Pairing-On-User-Dietary-Restriction/assets/83969599/771a0c24-4c9b-4078-a28f-89c7f8378f3b)
+
 
 
 
@@ -66,8 +70,28 @@
 
 
 ## Technologies Used
+Anaconda Python
+
+Pytorch
+
+Git
+
+Django and Flask
+
+Intel Dev. Cloud & Amazon Web Services
+
+Kubernetes
 
 ## Estimated cost after implementing the project
+Development and programming hours: Approximate 60 hours
+
+Tools and libraries licensing (if any): Mlops Licenses required
+
+Server or cloud hosting expenses: AWS/ GCP/ Intel Dev Cloud
+
+User interface design and development costs: Rs. 20K to 40K
+
+![image](https://github.com/priyanka011011/Food-Pairing-On-User-Dietary-Restriction/assets/83969599/536ccf95-a2cb-438a-b7f5-8682be9f5a04)
 
 
 
