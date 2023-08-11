@@ -42,6 +42,21 @@
      Well-being for making health-conscious decisions without sacrificing flavor and
      enjoyment for the people who are suffering from health chronic diseases.
 
+## List of One API Toolkits/Libraries used
+![Image Alt Text](relative-path-to-image.png)
+
+
+
+## Architecture Diagram
+  ![image](https://github.com/priyanka011011/Food-Pairing-On-User-Dietary-Restriction/assets/83969599/0f966e12-5f3f-40ca-8b90-21093aacb7bd)
+
+
+## Technologies Used
+
+## Estimated cost after implementing the project
+
+
+
      
 
 
