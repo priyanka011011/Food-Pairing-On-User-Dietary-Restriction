@@ -11,21 +11,22 @@ Original file is located at
 
 import numpy as np
 import pandas as pd
+from sklearn.pipeline import Pipeline
+from sklearn.neighbors import NearestNeighbors
+from sklearn.preprocessing import FunctionTransformer
 
 """#Reading the Dataset"""
 
-df=pd.read_csv("/content/dataset (1).csv")# Creating the Dataframe to read the file
-df
+df=pd.read_csv("dataset.csv")# Creating the Dataframe to read the file
+# df
 
 df.info()#Info returns the basic info of count and dtypes
 
 df = df.drop("Folate/µg",axis=1)# Drop the column Folate/ug
 
-df.tail()# Read last 5 defaults
+# df.tail()# Read last 5 defaults
 
-df.head() # Read first 5 defaults
-
-import pandas as pd
+# df.head() # Read first 5 defaults
 
 # Replace the column names with the actual column names from your data
 columns = ["title", "vegetarian", "vegan", "glutenFree", "dairyFree", "ingredients", "sustainable", "veryHealthy",
@@ -50,9 +51,7 @@ df['High Fat'] = df['percentFat'].apply(lambda x: 1 if x > avg_percent_fat else 
 df['Low Carbohydrate'] = df['percentCarbs'].apply(lambda x: 1 if x < avg_percent_carbs else 0)
 
 # Display the modified DataFrame
-print(df)
-
-import pandas as pd
+# print(df)
 
 # Calculate average values for percentProtein, percentFat, and percentCarbs
 avg_percent_protein = df['percentProtein'].mean()
@@ -67,9 +66,9 @@ df['Diabetes'] = df.apply(lambda row: 1 if #row['percentProtein'] > avg_percent_
                            else 0, axis=1)
 
 # Display the modified DataFrame with the "Diabetes" column
-print(df[['Diabetes']])
+# print(df[['Diabetes']])
 
-df.head()
+# df.head()
 
 unique_values_sum = df["Diabetes"].value_counts()# Values count
 unique_values_sum
@@ -83,24 +82,24 @@ df['Obesity'] = df.apply(lambda row: 1 if row['percentFat'] < mean_percent_fat
                          else 0, axis=1)
 
 # Display the modified DataFrame with the "Obesity" column
-print(df[['Obesity']])
+# print(df[['Obesity']])
 
 unique_value = df["Obesity"].value_counts()# value counts
-unique_value
+# unique_value
 
-df
+# print(df)
 
 mean_sodium = df['Sodium/mg'].mean()
 # Create the "Obesity" column based on the specified criteria
 df['BP'] = df.apply(lambda row: 1 if row['Sodium/mg'] < mean_sodium
                          else 0, axis=1)
 # Display the modified DataFrame with the "Obesity" column
-print(df[['title', 'BP']])
+# print(df[['title', 'BP']])
 
 unique_value = df["BP"].value_counts()# Value counts
-unique_value
+# unique_value
 
-df
+# print(df)
 
 df.Diabetes.value_counts()# diabetes value counts
 
@@ -116,12 +115,12 @@ df['Heart'] = df.apply(lambda row: 1 if #row['Cholesterol/mg'] > mean_cholorestr
                          else 0, axis=1)
 
 # Display the modified DataFrame with the "Obesity" column
-print(df[['Heart']])
+# print(df[['Heart']])
 
 unique_value = df["Heart"].value_counts()
-unique_value
+# print(unique_value)
 
-df
+# print(df)
 
 max_calories=16510860
 max_daily_fat=16510860
@@ -141,16 +140,20 @@ from sklearn.preprocessing import StandardScaler# Standard Scaler and fit it and
 scaler=StandardScaler()
 prep_data=scaler.fit_transform(extracted_data.iloc[:,10:27].to_numpy())
 
-prep_data# Prep Data after standard scaler
+# Prep Data after standard scaler
 
-"""Cosine similarity in machine learning can be used as a metric for deciding the optimal number of neighbors where the data points with a higher similarity will be considered as the nearest neighbors and the data points with lower similarity will not be considered."""
+# print(prep_data)
 
-from sklearn.neighbors import NearestNeighbors
+"""
+Cosine similarity in machine learning can be used as a metric for deciding the optimal number of neighbors 
+where the data points with a higher similarity will be considered as the nearest neighbors 
+and the data points with lower similarity will not be considered.
+"""
+
+
 neigh = NearestNeighbors(metric='cosine',algorithm='brute')
 neigh.fit(prep_data)
 
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import FunctionTransformer
 transformer = FunctionTransformer(neigh.kneighbors,kw_args={'return_distance':False})
 pipeline=Pipeline([('std_scaler',scaler),('NN',transformer)])
 
@@ -163,62 +166,71 @@ pipeline.transform(extracted_data.iloc[0:1,10:27].to_numpy())[0]
 extracted_data.iloc[pipeline.transform(extracted_data.iloc[0:1,10:27].to_numpy())[0]]
 
 # Taking user input from user to select vergetarian and Non-Vegetarian
-food_type = input("Enter your preference: (Vegetarian, Non-Vegetarian)").lower()
+# food_type = input("Enter your preference: (Vegetarian, Non-Vegetarian)").lower()
 
-if food_type == "vegetarian":
-# And Check with disease choice for the obesity, BP and Heart Disease and return the result of selected columns
-    disease_choice = input("Choose a disease (obesity, BP, Heart): ")
-    if disease_choice.lower() in ["obesity", "bp", "heart"]:
-        if disease_choice.upper() == "BP":
-          #input_value = int(input(f"Enter the {disease_choice.upper()} value (0 or 1): "))
-          filtered_data = extracted_data[
-            (extracted_data["vegetarian"] == True) & (extracted_data[disease_choice.upper()] == 1)
-          ]
-          filtered_data.reset_index(inplace=True)
-          if not filtered_data.empty:
-            for i in range(len(filtered_data)):
-              print(filtered_data.loc[i,"title"])
+
+def generate_recommendation(food_type, disease_choice) : 
+  if food_type == "vegetarian":
+  # And Check with disease choice for the obesity, BP and Heart Disease and return the result of selected columns
+      if disease_choice.lower() in ["obesity", "bp", "heart"]:
+          if disease_choice.upper() == "BP":
+            #input_value = int(input(f"Enter the {disease_choice.upper()} value (0 or 1): "))
+            filtered_data = extracted_data[
+              (extracted_data["vegetarian"] == True) & (extracted_data[disease_choice.upper()] == 1)
+            ]
+            filtered_data.reset_index(inplace=True)
+            if not filtered_data.empty:
+              output = []
+              for i in range(len(filtered_data)):
+                output.append(filtered_data.loc[i,"title"])
+              return output
+            else:
+              return "No matching food items found."
           else:
-            print("No matching food items found.")
-        else:
-          #input_value = int(input(f"Enter the {disease_choice.upper()} value (0 or 1): "))
-          #print(disease_choice.capitalize())
-          filtered_data = extracted_data[
-            (extracted_data["vegetarian"] == True) & (extracted_data[disease_choice.capitalize()] == 1)
-          ]
-          filtered_data.reset_index(inplace=True)
-          if not filtered_data.empty:
-            for i in range(len(filtered_data)):
-              print(filtered_data.loc[i,"title"])
+            #input_value = int(input(f"Enter the {disease_choice.upper()} value (0 or 1): "))
+            print(disease_choice.capitalize())
+            filtered_data = extracted_data[
+              (extracted_data["vegetarian"] == True) & (extracted_data[disease_choice.capitalize()] == 1)
+            ]
+            filtered_data.reset_index(inplace=True)
+            if not filtered_data.empty:
+              output = []
+              for i in range(len(filtered_data)):
+                output.append(filtered_data.loc[i,"title"])
+              return output
+            else:
+              return "No matching food items found."
+      else:
+          return "Invalid disease choice."
+  elif food_type == "non-vegetarian":
+      # disease_choice = input("Choose a disease (obesity, BP, Heart): ")
+      if disease_choice.lower() in ["obesity", "bp", "heart"]:
+          if disease_choice.upper() == "BP":
+            #input_value = int(input(f"Enter the {disease_choice.upper()} value (0 or 1): "))
+            filtered_data = extracted_data[
+              (extracted_data["vegetarian"] == 0) & (extracted_data[disease_choice.upper()] == 1)
+            ]
+            filtered_data.reset_index(inplace=True)
+            if not filtered_data.empty:
+              output = []
+              for i in range(len(filtered_data)):
+                output.append(filtered_data.loc[i,"title"])
+              return output
+            else:
+              return "No matching food items found."
           else:
-            print("No matching food items found.")
-    else:
-        print("Invalid disease choice.")
-elif food_type == "non-vegetarian":
-    disease_choice = input("Choose a disease (obesity, BP, Heart): ")
-    if disease_choice.lower() in ["obesity", "bp", "heart"]:
-        if disease_choice.upper() == "BP":
-          #input_value = int(input(f"Enter the {disease_choice.upper()} value (0 or 1): "))
-          filtered_data = extracted_data[
-            (extracted_data["vegetarian"] == 0) & (extracted_data[disease_choice.upper()] == 1)
-          ]
-          filtered_data.reset_index(inplace=True)
-          if not filtered_data.empty:
-            for i in range(len(filtered_data)):
-              print(filtered_data.loc[i,"title"])
-          else:
-            print("No matching food items found.")
-        else:
-          #input_value = int(input(f"Enter the {disease_choice.upper()} value (0 or 1): "))
-          #print(disease_choice.capitalize())
-          filtered_data = extracted_data[
-            (extracted_data["vegetarian"] == True) & (extracted_data[disease_choice.capitalize()] == 1)
-          ]
-          filtered_data.reset_index(inplace=True)
-          if not filtered_data.empty:
-            for i in range(len(filtered_data)):
-              print(filtered_data.loc[i,"title"])
-          else:
-            print("No matching food items found.")
-    else:
-        print("Invalid disease choice.")
+            #input_value = int(input(f"Enter the {disease_choice.upper()} value (0 or 1): "))
+            # print(disease_choice.capitalize())
+            filtered_data = extracted_data[
+              (extracted_data["vegetarian"] == True) & (extracted_data[disease_choice.capitalize()] == 1)
+            ]
+            filtered_data.reset_index(inplace=True)
+            if not filtered_data.empty:
+              output = []
+              for i in range(len(filtered_data)):
+                output.append(filtered_data.loc[i,"title"])
+              return output
+            else:
+              return "No matching food items found."
+      else:
+          return "Invalid disease choice."
