@@ -1,4 +1,5 @@
 # Food-Pairing-On-User-Dietary-Restriction 
+![image](https://github.com/priyanka011011/Food-Pairing-On-User-Dietary-Restriction/assets/83969599/7a53af6c-ae91-4a04-b629-ea3ad5bd67d9)
 
 ## Problem Statement
   In a world of diverse ingredients and dietary considerations, individuals often face
