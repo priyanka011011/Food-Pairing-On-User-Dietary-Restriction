@@ -30,7 +30,7 @@ def preferences():
     if st.button("Get Recommendations"):
         st.session_state.page = "recommendations"
         # Run the Colab notebook using subprocess
-        subprocess.run(["jupyter", "nbconvert", "--to", "notebook", "--execute", "C:\\Users\\Sundaraavadhani\\Downloads\\Recommentation.ipynb"])
+        subprocess.run(["jupyter", "nbconvert", "--to", "notebook", "--execute", "C:\\Users\\HP\\Documents\\3rdSEM\\Intel_openAPI\\food.py"])
 
 if __name__ == "__main__":
     main()
