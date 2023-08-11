@@ -29,3 +29,19 @@
   5. Embraces a comprehensive strategy that incorporates various aspects of data analysis &
   Delivers well-rounded recommendations that are informative and enticing.
 
+## What we offer
+  1. Tailors food recommendations to individual tastes and dietary needs and Offers meals
+     aligned with personal preferences, leading to a more satisfying dining experience
+     simplifies meal choices by presenting options that resonate with user preferences.
+
+  2. Utilizes advanced algorithms to match ingredients and flavors with utmost accuracy &
+     Recognizes that each user has distinct tastes and dietary restrictions. Guides users
+     through an exploration of flavors based on their preferences.
+
+  3. Suggests pairings that adhere to nutritional goals and dietary requirements & Promoting
+     Well-being for making health-conscious decisions without sacrificing flavor and
+     enjoyment for the people who are suffering from health chronic diseases.
+
+     
+
+
