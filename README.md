@@ -13,7 +13,7 @@
   with their ingredient preferences and dietary restrictions. 
 
 ## Approach
-  1, Our hybrid approach integrates content-based filtering and natural language processing
+  1. Our hybrid approach integrates content-based filtering and natural language processing
   (NLP) techniques to offer a robust and dynamic food pairing recommendation system.
 
   2. Primary goal is to elevate the precision and customization of food recommendations and
