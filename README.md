@@ -54,7 +54,7 @@
   ![image](https://github.com/priyanka011011/Food-Pairing-On-User-Dietary-Restriction/assets/83969599/54f6e4a3-13a2-4bde-aae9-753daf78c816)
   ![image](https://github.com/priyanka011011/Food-Pairing-On-User-Dietary-Restriction/assets/83969599/22b9f45a-ff6e-48b0-81f0-143a5a7a208c)
   ![image](https://github.com/priyanka011011/Food-Pairing-On-User-Dietary-Restriction/assets/83969599/6fb6ac8e-f096-4f65-9a0f-4ae763c1b68d)
-  ![image](https://github.com/priyanka011011/Food-Pairing-On-User-Dietary-Restriction/assets/83969599/511b32af-a26f-4d93-8be5-e565102def03)
+
 
 
 
