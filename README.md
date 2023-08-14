@@ -1,6 +1,13 @@
-# Food-Pairing-On-User-Dietary-Restriction 
+# Food-Pairings-Based-On-User-Preferences-&-Dietary-Restrictions 
 ![image](https://github.com/priyanka011011/Food-Pairing-On-User-Dietary-Restriction/assets/83969599/7a53af6c-ae91-4a04-b629-ea3ad5bd67d9)
 
+## TEAM: CodeCrafters
+ Members:
+ 1. Prateek Kumar
+ 2. Priyanka Dey
+ 3. Sowmia R
+ 4. Sundaraavadhani A S
+    
 ## Problem Statement
   In a world of diverse ingredients and dietary considerations, individuals often face
   challenges in selecting food pairings that cater to their preferences and restrictions. The
@@ -67,7 +74,7 @@
 
 
 ## Architecture Diagram
-  ![image](https://github.com/priyanka011011/Food-Pairing-On-User-Dietary-Restriction/assets/83969599/0f966e12-5f3f-40ca-8b90-21093aacb7bd)
+![image](https://github.com/priyanka011011/Food-Pairing-On-User-Dietary-Restriction/assets/83969599/1d3be14f-8c7b-4be6-8a43-9a17ff48ffc9)
 
 
 ## Technologies Used
