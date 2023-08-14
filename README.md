@@ -1,4 +1,4 @@
-# Food-Pairings-Based-On-User-Preferences-&-Dietary-Restrictions 
+# Food-Pairings-Based-On-User-Preferences-And-Dietary-Restrictions 
 ![image](https://github.com/priyanka011011/Food-Pairing-On-User-Dietary-Restriction/assets/83969599/7a53af6c-ae91-4a04-b629-ea3ad5bd67d9)
 
 ## TEAM: CodeCrafters
