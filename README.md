@@ -88,7 +88,7 @@ Pytorch
 
 Git
 
-Django and Flask
+Streamlit
 
 Intel Dev. Cloud & Amazon Web Services
 
