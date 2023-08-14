@@ -17,7 +17,7 @@
   Our project addresses this issue by implementing a solution that utilizes computational
   gastronomy techniques to offer personalized food pairing suggestions. By combining
   content-based filtering and natural language processing, we strive to simplify the
-  decision-making process for individuals seeking tailored culinary experiences that align
+  the decision-making process for individuals seeking tailored culinary experiences that align
   with their ingredient preferences and dietary restrictions. 
 
 ## Approach
@@ -48,11 +48,12 @@
 
   3. Suggests pairings that adhere to nutritional goals and dietary requirements & Promoting
      Well-being for making health-conscious decisions without sacrificing flavor and
-     enjoyment for the people who are suffering from health chronic diseases.
+     enjoyment for people who are suffering from health chronic diseases.
 
 ## List of One API Toolkits/Libraries used
  1. OneAPI Jupyter Notebook.
  2. OneAPI Cloud
+ 3. Intel oneAPI Data Analytics Library (oneDAL)
 
     
   ![image](https://github.com/priyanka011011/Food-Pairing-On-User-Dietary-Restriction/assets/83969599/54f6e4a3-13a2-4bde-aae9-753daf78c816)
@@ -84,13 +85,11 @@
 ## Technologies Used
 Anaconda Python
 
-Pytorch
-
 Git
 
 Streamlit
 
-Intel Dev. Cloud & Amazon Web Services
+Intel Dev. Cloud 
 
 
 
@@ -99,7 +98,7 @@ Development and programming hours: Approximate 60 hours
 
 Tools and libraries licensing (if any): Mlops Licenses required
 
-Server or cloud hosting expenses: AWS/ GCP/ Intel Dev Cloud
+Server or cloud hosting expenses: AWS/ Intel Dev Cloud
 
 User interface design and development costs: Rs. 20K to 40K
 
