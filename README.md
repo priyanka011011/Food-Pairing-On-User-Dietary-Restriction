@@ -88,7 +88,7 @@ Django and Flask
 
 Intel Dev. Cloud & Amazon Web Services
 
-Kubernetes
+
 
 ## Estimated cost after implementing the project
 Development and programming hours: Approximate 60 hours
